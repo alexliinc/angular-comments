@@ -5,8 +5,14 @@
 	<ul>
 		<li>By: {{comment.author}}</li>
 	</ul>
-	<button type="button" (click)=deleteComment(position)>DELETE ME</button>
+	<button class="waves-effect waves-light btn" type="button" (click)=deleteComment(position)>DELETE ME <i class="material-icons">delete_forever
+</i> </button>
+	
+
 	<!-- <button type="button" (click)=editComment(position)>EDIT ME</button> -->
+	<br>
+	<br>
+
 	<app-edit-comment [compentId]=position></app-edit-comment>
 </ul>
 
