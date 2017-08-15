@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { NewCommentComponent } from './new-comment/new-comment.component';
 
 import { FormsModule } from '@angular/forms';
-import { CommentService } from './comment.service'
+import { CommentService } from './comment.service';
+import { EditCommentComponent } from './edit-comment/edit-comment.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewCommentComponent
+    NewCommentComponent,
+    EditCommentComponent
   ],
   imports: [
     BrowserModule,

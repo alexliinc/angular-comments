@@ -6,5 +6,7 @@
 		<li>By: {{comment.author}}</li>
 	</ul>
 	<button type="button" (click)=deleteComment(position)>DELETE ME</button>
+	<!-- <button type="button" (click)=editComment(position)>EDIT ME</button> -->
+	<app-edit-comment [compentId]=position></app-edit-comment>
 </ul>
 

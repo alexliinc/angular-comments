@@ -1,0 +1,12 @@
+<!-- <label *ngIf="editMode">Comment</label>
+<input *ngIf="editMode">
+<label *ngIf="editMode">Author</label>
+<input *ngIf="editMode"> -->
+
+<label *ngIf="editMode">Comment</label>
+<input *ngIf="editMode" [(ngModel)]="comment">
+<label *ngIf="editMode">Author</label>
+<input *ngIf="editMode" [(ngModel)]="author">
+
+<button (click)="editMode=true">Edit</button>
+<button (click)="save(compentId)">Save</button>

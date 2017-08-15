@@ -15,6 +15,11 @@ export class AppComponent {
     this.commentService.comments.splice(position,1);
   }
 
+  // editComment(position){
+  //   this.commentService.comments[position].title = ;
+  //   this.commentService.comments[position].author =  ;
+  // }
+
   constructor(public commentService: CommentService) { }
 
   ngOnInit() {
