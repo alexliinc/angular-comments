@@ -1,4 +1,10 @@
 <h1>Comments</h1>
-<ul>
-    <li *ngFor="let comment of comments">{{comment}}</li>
+<app-new-comment></app-new-comment>
+<ul *ngFor="let comment of comments ; let position = index" [attr.data-index]="position">
+    <li>Comment: {{comment.title}}</li>
+	<ul>
+		<li>By: {{comment.author}}</li>
+	</ul>
+	<button type="button" (click)=deleteComment(position)>DELETE ME</button>
 </ul>
+

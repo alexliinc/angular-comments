@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CommentService} from './comment.service'
 
 @Component({
   selector: 'app-root',
@@ -6,9 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  comments = [
-      'first comment!',
-      'nice work!',
-      'I would also like to congratulate you!'
-  ];
+  position;
+  comments;
+ 
+  deleteComment(position){
+  	//alert(position);
+    this.commentService.comments.splice(position,1);
+  }
+
+  constructor(public commentService: CommentService) { }
+
+  ngOnInit() {
+    this.comments = this.commentService.getComments();
+    };
 }
+
